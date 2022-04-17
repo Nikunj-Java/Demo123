@@ -1,0 +1,41 @@
+Normal commands are
+
+
+---------------------Git hub Repository Initialization------------------------
+1.git init
+2.git branch -M main
+	step three will be different for different git hub repository
+3.git remote add origin https://github.com/Nikunj-Java/Demo123.git
+------------------------------------------------------------------------------
+	use this commands every time to upload your code using https
+4. git add .
+5. git commit -m "your commit comments"
+6. git push -u origin main
+-------------------------------------------------------------------------------
+use this commands every time to upload your code using ssh
+4. git add .
+5. git commit -m "your commit comments"
+6. git push -u origin main
+7. you need to enter your ssh-key password
+
+
+
+----------------------------SSH -KEY VIA GIT BASH------------------------------
+
+OPEN GITBASH EXECUTE THE FOLLOWING COMMANDS
+
+1. ssh-keygen -t rsa -b 4096 -C "your email address"
+	to start the ssh-agent in background
+2. eval $(ssh-agent -s)
+	add your private key to the ssh-agent
+3.ssh-add ~/.ssh/id_rsa
+	add your password
+
+	COPY the ssh key to your clipboard
+4.clip <~/.ssh/id_rsa.pub
+
+go to the github repository> settings>SSH ANG GPG KEYS
+
+DELETE THE OLD KEY AND PRESS CTR+V TO PASTE THE KEY COPIED TO THE CLIP BOARD
+
+SAVE IT AND NOW YOU ARE READY TO UPLOAD BY USING SSH-KEY
